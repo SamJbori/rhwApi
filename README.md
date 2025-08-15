@@ -21,3 +21,17 @@ This app has 3 enviroment variables
 DB_STRING - Used to connect to the DB (currently using cloud db)
 PORT - Server Port (Optional, default 3006)
 AUTH_TOKEN - Auth Token
+
+# Prisma
+
+Prisma DB should generate automatically upon packages installation, in case it didn't
+
+you can use your prefered Package Manager to generate
+
+```bash
+npx prisma generate
+# or
+yarn prisma generate
+# or
+pnpm prisma generate
+```
