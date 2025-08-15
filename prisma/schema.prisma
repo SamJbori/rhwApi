@@ -1,0 +1,19 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_STRING")
+}
+
+model Task {
+  id          String    @id @default(uuid()) @db.Char(36)
+  title       String    @db.VarChar(255)
+  color       String?    @db.VarChar(50)
+  completed   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+}
