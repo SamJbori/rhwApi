@@ -5,6 +5,7 @@
   "main": "./src/index.ts",
   "type": "module",
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "node --import=tsx --watch ./src/index.ts",
     "typecheck": "tsc --noEmit"
   },
